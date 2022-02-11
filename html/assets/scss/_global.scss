@@ -1,0 +1,15 @@
+// ***********************************
+// Global
+// ***********************************
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+	max-width: 1464px;
+    @media #{$medium-screen} {
+        max-width: 1304px;
+    }
+    @media #{$small-screen} {
+        max-width: 1164px;
+    }
+    @media #{$tablet} {
+        max-width: 964px;
+    }
+}
