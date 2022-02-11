@@ -495,9 +495,9 @@ input:focus, textarea:focus, a:focus {
 @media only screen and (max-width: 767px) {
   .main-menu {
     position: fixed;
-    left: -240px;
+    left: -300px;
     top: 0;
-    width: 240px;
+    width: 300px;
     min-height: 100vh;
     background: #121212;
     z-index: 999;
@@ -517,7 +517,7 @@ input:focus, textarea:focus, a:focus {
   }
   .main-menu ul li {
     display: block;
-    padding: 10px 0;
+    padding: 12px 0;
     text-align: center;
     border-bottom: solid 1px #090909;
   }
