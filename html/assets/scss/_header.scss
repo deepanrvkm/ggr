@@ -26,12 +26,21 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 3px 0 0;
+    @media #{$tablet} {
+        padding: 3px 15px 0;
+    }
     @media #{$mobile-only} {
-        padding: 3px 20px 0;
+        padding: 3px 15px 0;
     }
 }
 .logo{
 	width: 120px;
+    @media #{$small-screen} {
+        width: 100px;
+    }
+    @media #{$tablet} {
+        width: 100px;
+    }
     @media #{$mobile-only} {
         width: 80px;
     }
@@ -44,6 +53,14 @@
         display: flex;
         li{
             padding-left: 32px;
+            @media #{$small-screen} {
+                font-size: 15px;
+                padding-left: 28px; 
+            }
+            @media #{$tablet} {
+                font-size: 15px;
+                padding-left: 24px; 
+            }
             a{
                 color: #CCC;
                 display: block;
@@ -112,6 +129,7 @@
     position: absolute;
     right: 30px;
     cursor: pointer;
+    z-index: 999;
     i{
         color: #CCC; 
     }

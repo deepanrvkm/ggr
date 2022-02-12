@@ -4,6 +4,12 @@
  .footer-top{
      background: #363636;
      padding: 60px 0 ;
+     @media #{$small-screen} {
+        padding: 50px 0 40px;
+     }
+     @media #{$tablet} {
+        padding: 40px 0 20px;
+     }
      @media #{$mobile-only} {
         padding: 40px 0 60px;
      }
@@ -72,6 +78,12 @@
         padding: 58px 0 12px;
         position: relative;
         margin-bottom: 20px;
+        @media #{$small-screen} {
+            padding: 48px 0 10px;
+        }
+        @media #{$tablet} {
+            padding: 35px 0 12px;
+        }
         @media #{$mobile-only} {
             display: none;
         }
@@ -102,6 +114,9 @@
     }
     .logo{
         padding: 0 0 10px;
+        @media #{$tablet} {
+            padding: 0 0 5px;
+        }
         @media #{$mobile-only} {
             width: 100%;
             img{
@@ -112,6 +127,10 @@
     &:first-child{
         min-width: 30%;
         padding-right: 5%;
+        @media #{$tablet} {
+            min-width: 25%;
+            padding-right: 0;
+        }
         @media #{$mobile-only} {
             padding-right: 0;
             text-align: center;

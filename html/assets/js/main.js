@@ -12,7 +12,7 @@ jQuery(function() {
         e.stopPropagation();      
     });    
     jQuery('body').click( function() {       
-        jQuery(".main-menu").toggleClass("active");        
+        jQuery(".main-menu").removeClass("active");        
     });
 
 	 /*===============================================

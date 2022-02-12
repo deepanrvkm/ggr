@@ -113,6 +113,9 @@
     border: none;
     @include transform-translatey(-50%);
     @include transition(all 200ms ease-in-out);
+    @media #{$mobile-only} {
+        display: none !important;
+    }
     &:hover{
         background: rgba(255,255,255,.5);
         &:before{
