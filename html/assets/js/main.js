@@ -104,7 +104,7 @@ jQuery(function() {
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 		});
 
-		var customMarker = '../assets/images/marker.png';
+		var customMarker = '../html/assets/images/marker.png';
 		var marker = new google.maps.Marker({
 			position: new google.maps.LatLng(25.34592507409814, 55.48572998806931),
 			icon: customMarker,
