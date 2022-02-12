@@ -1,6 +1,11 @@
 // ***********************************
 // HEADER
 // ***********************************
+#top{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
 .header{
 	background: #121212;
 	border-top: solid 3px #d2ac2a;
@@ -127,7 +132,7 @@
     display: none;
     font-size: 32px;
     position: absolute;
-    right: 30px;
+    right: 25px;
     cursor: pointer;
     z-index: 999;
     i{
