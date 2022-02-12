@@ -680,7 +680,7 @@ input:focus, textarea:focus, a:focus {
 
 @media only screen and (max-width: 767px) {
   .banner-slider-wrap .banner-content h2 {
-    font-size: 32px;
+    font-size: 30px;
     padding: 0 0 5px;
   }
 }
