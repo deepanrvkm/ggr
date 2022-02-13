@@ -243,4 +243,28 @@
 	p{
 		padding: 0;
 	}
+	ul{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 0 0;
+		li{
+			padding: 0 3px;
+			a{
+				color: #868686;
+				i{
+					color: #868686;
+					transition: all 200ms;
+				}
+				&:hover i{
+					color: #464646
+				}
+			}
+		}
+	}
+	.team-data{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
