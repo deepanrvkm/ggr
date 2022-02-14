@@ -9,18 +9,18 @@ get_header();
 
 <section class="content">
         <div class="banner-slider-wrap">
-            <div class="banner-content" data-aos="fade-up" data-aos-duration="1200">
+            <div class="banner-content" data-aos="zoom-in" data-aos-duration="1200">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h2>Focused on Eternal Traditional Gold Value</h2>
+                            <h2><?php the_field('banner_caption'); ?></h2>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="banner-slider">
                 <div class="banner-image">
-                    <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/banner1.jpg" alt="">
+                    <img src="<?php the_field('banner_image'); ?>" alt="">
                 </div>
             </div>
         </div>
@@ -40,147 +40,37 @@ get_header();
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
-                    <div class="col-sm-6 col-md-4 col-xl-3" data-aos="zoom-in" data-aos-duration="900">
-                        <div class="team-block">
-                            <div class="team-image">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/team1.jpg" alt="">
+                    <?php if( have_rows('single') ): ?>
+        
+                        <?php while( have_rows('single') ): the_row(); ?>
+                            
+                            <div class="col-sm-6 col-md-4 col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                                <div class="team-block">
+                                    <div class="team-image">
+                                        <img src="<?php the_sub_field('photo'); ?>" alt="">
+                                    </div>
+                                    <div class="team-content">
+                                        <h6><?php the_sub_field('name'); ?></h6>
+                                        <?php the_sub_field('designation'); ?>
+                                        <ul>
+                                            <li><a target="blank" href="<?php the_sub_field('facebook'); ?>"><i class="fa fa-facebook-square"></i></a></li>
+                                            <li><a target="blank" href="<?php the_sub_field('twitter'); ?>"><i class="fa fa-twitter-square"></i></a></li>
+                                            <li><a target="blank" href="<?php the_sub_field('linkedin'); ?>"><i class="fa fa-linkedin-square"></i></a></li>                                            
+                                            <li><a target="blank" href="<?php the_sub_field('instagram'); ?>"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="team-content">
-                                <h6>Sudheesh Soman</h6>
-                                <p>General Director</p>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-xl-3" data-aos="zoom-in" data-aos-duration="900">
-                        <div class="team-block">
-                            <div class="team-image">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/team2.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <h6>Vipin Raj</h6>
-                                <p>Sales Director</p>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-xl-3" data-aos="zoom-in" data-aos-duration="900">
-                        <div class="team-block">
-                            <div class="team-image">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/team3.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <h6>Dhanya Nambiar</h6>
-                                <p>Compliance Officer</p>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-xl-3" data-aos="zoom-in" data-aos-duration="900">
-                        <div class="team-block">
-                            <div class="team-image">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/team1.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <h6>Sudheesh Soman</h6>
-                                <p>General Director</p>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-xl-3" data-aos="zoom-in" data-aos-duration="900">
-                        <div class="team-block">
-                            <div class="team-image">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/team2.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <h6>Vipin Raj</h6>
-                                <p>Sales Director</p>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-xl-3" data-aos="zoom-in" data-aos-duration="900">
-                        <div class="team-block">
-                            <div class="team-image">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/team3.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <h6>Dhanya Nambiar</h6>
-                                <p>Compliance Officer</p>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-xl-3" data-aos="zoom-in" data-aos-duration="900">
-                        <div class="team-block">
-                            <div class="team-image">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/team2.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <h6>Vipin Raj</h6>
-                                <p>Sales Director</p>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-xl-3" data-aos="zoom-in" data-aos-duration="900">
-                        <div class="team-block">
-                            <div class="team-image">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/team1.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <h6>Sudheesh Soman</h6>
-                                <p>General Director</p>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                                                        
+                            <?php endwhile; ?>
+
+                    <?php endif; ?>
+
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="col-md-12" data-aos="zoom-in" data-aos-duration="900">
                         <div class="ggr-team">
-                            <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/team.jpg" alt="">
+                            <img src="<?php the_field('group_photo'); ?>" alt="">
                         </div>
                     </div>
                 </div>

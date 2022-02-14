@@ -4,7 +4,24 @@
  */
 get_header();
 ?>
-
+<section class="content">
+        <div class="banner-slider-wrap">
+            <div class="banner-content" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2><?php the_field('banner_caption'); ?></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-slider">
+                <div class="banner-image">
+                    <img src="<?php the_field('banner_image'); ?>" alt="">                    
+                </div>
+            </div>
+        </div>
+        
 <div class="content-block-outer">
             <div class="container">             
                 <div class="row justify-content-md-center">
@@ -86,5 +103,7 @@ get_header();
         <div class="map-outer" data-aos="fade-up" data-aos-duration="900">
             <div id="map-canvas"></div>
         </div>
+
+</section>
 
 <?php get_footer();?>
