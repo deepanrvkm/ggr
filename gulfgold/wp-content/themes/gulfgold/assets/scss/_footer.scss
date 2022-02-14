@@ -1,0 +1,208 @@
+// ***********************************
+// FOOTER
+// ***********************************
+ .footer-top{
+     background: #363636;
+     padding: 60px 0 ;
+     @media #{$small-screen} {
+        padding: 50px 0 40px;
+     }
+     @media #{$tablet} {
+        padding: 40px 0 20px;
+     }
+     @media #{$mobile-only} {
+        padding: 40px 0 60px;
+     }
+ }
+ .footer-bottom{
+     background: #2a2a2a;
+     padding: 15px 0;
+     position: relative;
+ }
+ .copyright{
+     font-size: 14px;
+     color: #989898;
+     @media #{$mobile-only} {
+         text-align: center;
+     }
+ }
+ .go-top{
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     height: 100%;   
+     @media #{$mobile-only} {
+         left: 0;
+         bottom: 30px;
+         width: 48px;
+         margin: auto;
+     } 
+     a{
+        width: 48px;
+        height: 100%;
+        background: #121212; 
+        font-size: 24px;
+        color: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media #{$mobile-only} {
+            border-radius: 10px 10px 0 0;
+            height: 30px;
+        }
+        i{
+            color: #FFF;
+            @include transition(all 200ms ease-in-out);
+        }
+        &:hover{
+            i{
+                color: #d2ac2a;
+            }            
+        }
+     }
+ }
+.footer-block-outer{
+    display: flex;
+    justify-content: space-between;
+    @media #{$mobile-only} {
+        display: block;
+    }
+}
+.footer-block{
+    max-width: 25%;
+    @media #{$mobile-only} {
+        min-width: 100% !important;
+    }
+    h6{
+        color: #f7f7f7;
+        padding: 58px 0 12px;
+        position: relative;
+        margin-bottom: 20px;
+        @media #{$small-screen} {
+            padding: 48px 0 10px;
+        }
+        @media #{$tablet} {
+            padding: 35px 0 12px;
+        }
+        @media #{$mobile-only} {
+            display: none;
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #818181;
+        }
+    }
+    ul{        
+        li{
+            font-size: 14px;
+            line-height: 1.5;
+            color: #CCC;
+            padding: 0 0 10px;
+            a{
+                color: #CCC;
+                transition: all 200ms; 
+                &:hover{
+                    color: #FFF;
+                }
+            } 
+        }
+    }
+    .logo{
+        padding: 0 0 10px;
+        @media #{$tablet} {
+            padding: 0 0 5px;
+        }
+        @media #{$mobile-only} {
+            width: 100%;
+            img{
+                width: 120px;
+            }
+        }
+    }
+    &:first-child{
+        min-width: 30%;
+        padding-right: 5%;
+        @media #{$tablet} {
+            min-width: 25%;
+            padding-right: 0;
+        }
+        @media #{$mobile-only} {
+            padding-right: 0;
+            text-align: center;
+        }
+        p{
+            font-size: 14px;
+            line-height: 1.5;
+            color: #CCC;
+        }
+    }
+    &:nth-child(2){
+        min-width: 20%;
+        @media #{$mobile-only} {
+            display: none;
+        }
+    }
+    &:nth-child(3){
+        min-width: 20%;
+        @media #{$mobile-only} {
+            display: none;
+        }
+    }
+    &:last-child{
+        min-width: 20%;
+    }
+}
+.link{
+    font-size: 14px;
+    line-height: 1.5;
+    color: #CCC;
+    padding: 0 0 10px;
+    @media #{$mobile-only} {
+        text-align: center;
+        padding-right: 15px;
+    }
+    i{
+        color: #CCC;
+        width: 20px;  
+    }
+    span {
+        color: #CCC;  
+    }
+    a{
+        color: #CCC;
+        transition: all 200ms; 
+        &:hover{
+            color: #FFF;
+        }
+    }
+}
+.social-media{
+    display: flex;
+    align-items: center;
+    @media #{$mobile-only} {
+        justify-content: center;
+    }
+    li{
+        margin-right: 10px;
+        @media #{$mobile-only} {
+            margin: 0 5px; 
+        }
+        a{
+            font-size: 18px;            
+            i{
+                color: #CCC;
+                transition: all 200ms; 
+            }
+            &:hover{
+                i{
+                    color: #FFF
+                };
+            }
+        }
+    }
+}

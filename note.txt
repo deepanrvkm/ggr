@@ -1,0 +1,5 @@
+db: gulfgoldrefinery
+
+http://localhost/ggr/gulfgold/ggradmin/
+ggradmin
+ggrTest#1234
