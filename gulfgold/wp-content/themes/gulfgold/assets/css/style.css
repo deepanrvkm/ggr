@@ -729,20 +729,20 @@ input:focus, textarea:focus, a:focus {
   background: #e0b115;
 }
 
-.content-area .download {
+.content-area .download ul {
   padding-left: 20px;
   margin-bottom: 20px;
 }
 
-.content-area .download li {
+.content-area .download ul li {
   padding-left: 25px;
 }
 
-.content-area .download li:before {
+.content-area .download ul li:before {
   display: none;
 }
 
-.content-area .download li:after {
+.content-area .download ul li:after {
   font-family: "Fontawesome";
   content: "\f019";
   position: absolute;

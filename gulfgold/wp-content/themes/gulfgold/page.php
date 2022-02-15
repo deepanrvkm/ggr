@@ -4,7 +4,7 @@
 
     <section class="content">
         <div class="banner-slider-wrap">
-            <div class="banner-content" data-aos="zoom-in" data-aos-duration="1200">
+            <div class="banner-content" data-aos="fade-up" data-aos-duration="900">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -35,6 +35,15 @@
                                 </div>
                                 <div class="content-area">
                                     <?php the_content();?>
+                                    <?php if( get_field('download_links') ): ?>
+                                        <div class="download">
+                                            <div class="download-btn">
+                                                <i class="fa fa-download" aria-hidden="true"></i>                                        
+                                                <span><?php the_field('dowload_button');?> </span>
+                                            </div>
+                                            <?php the_field('download_links');?>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

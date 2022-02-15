@@ -18,20 +18,15 @@
                             <div class="footer-block" data-aos="fade-up" data-aos-duration="900">
                                 <h6>Services</h6>
                                 <ul>
-                                    <li><a href="#">Refining services</a></li>
-                                    <li><a href="#">Assaying services</a></li>
-                                    <li><a href="#">Precious metal brokerage</a></li>
-                                    <li><a href="#">Financing services</a></li>
+                                    <li><a href="<?php the_permalink() ?>/services">Refining services</a></li>
+                                    <li><a href="<?php the_permalink() ?>/services">Assaying services</a></li>
+                                    <li><a href="<?php the_permalink() ?>/services">Precious metal brokerage</a></li>
+                                    <li><a href="<?php the_permalink() ?>/services">Financing services</a></li>
                                 </ul>
                             </div>
                             <div class="footer-block" data-aos="fade-up" data-aos-duration="900">
                                 <h6>Our Company</h6>
-                                <ul>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Why GGR</a></li>
-                                    <li><a href="#">Responsible Sourcing</a></li>
-                                    <li><a href="#">Our Team</a></li>
-                                </ul>
+                                <?php wp_nav_menu( array( 'theme_location' => 'footer' ) );?> 
                             </div>
                             <div class="footer-block" data-aos="fade-up" data-aos-duration="900">
                                 <h6>Contact</h6>

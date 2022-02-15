@@ -9,7 +9,7 @@ get_header();
 
     <section class="content">
         <div class="banner-slider-wrap">
-            <div class="banner-content" data-aos="zoom-in" data-aos-duration="1200">
+            <div class="banner-content" data-aos="fade-up" data-aos-duration="900">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
