@@ -98,8 +98,8 @@ function sk_body_class( $classes ) {
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
-		'page_title' 	=> 'General Info',
-		'menu_title'	=> 'General Info',
+		'page_title' 	=> 'General',
+		'menu_title'	=> 'General',
 		'menu_slug' 	=> 'general-info',
 		'capability'	=> 'edit_posts',
 		'icon_url'		=> 'dashicons-edit'
