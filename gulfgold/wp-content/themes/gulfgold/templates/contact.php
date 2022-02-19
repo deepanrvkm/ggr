@@ -16,14 +16,18 @@ get_header();
                 </div>
             </div>
             <div class="banner-slider">
-                <div class="banner-image">
-                    <img src="<?php the_field('banner_image'); ?>" alt="">                    
-                </div>
+                <?php if( have_rows('banner_images') ): ?>
+                    <?php while( have_rows('banner_images') ): the_row(); ?>
+                        <div class="banner-image">
+                            <img src="<?php the_sub_field('banner_image'); ?>" alt="">
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>                
             </div>
         </div>
         
 <div class="content-block-outer">
-            <div class="container">             
+        <div class="container">             
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <div class="content-wrap">
@@ -33,21 +37,21 @@ get_header();
                                     <h3><?php the_title();?></h3>
                                     <div class="link">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <a target="blank" href="https://www.google.com/maps/place/25%C2%B020'43.5%22N+55%C2%B029'06.8%22E/@25.3454288,55.4830424,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x3ce734d29dfc853d!8m2!3d25.3454288!4d55.4852311?hl=en">SAIF Zone 9244, Sharjah</a>
+                                        <a target="blank" href="https://www.google.com/maps/place/25%C2%B020'43.5%22N+55%C2%B029'06.8%22E/@25.3454288,55.4830424,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x3ce734d29dfc853d!8m2!3d25.3454288!4d55.4852311?hl=en"><?php the_field('address', 'option'); ?></a>
                                     </div>
                                     <div class="link">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <a href="tel:97165529909">+971 6552 9909</a>
+                                        <a href="tel:<?php the_field('phone', 'option'); ?>">+<?php the_field('phone', 'option'); ?></a>
                                     </div>
                                     <div class="link">
                                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                        <a href="mailto:info@gulfrefinery.com">info@gulfrefinery.com</a>
+                                        <a href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a>
                                     </div>
                                     <ul class="social-media">
-                                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="<?php the_field('twitter_link', 'option'); ?>" target="blank"><i class="fa fa-twitter-square"></i></a></li>
+                                        <li><a href="<?php the_field('linkedin_link', 'option'); ?>" target="blank"><i class="fa fa-linkedin-square"></i></a></li>
+                                        <li><a href="<?php the_field('facebook_link', 'option'); ?>" target="blank"><i class="fa fa-facebook-square"></i></a></li>
+                                        <li><a href="<?php the_field('instagram_link', 'option'); ?>" target="blank"><i class="fa fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -57,7 +61,8 @@ get_header();
                                 </div>
                                 <div class="content-area">
                                     <div class="contact-form">
-                                        <form>
+                                        <?php the_content();?>
+                                        <!-- <form>
                                             <div class="contact-row">
                                                 <div class="contact-grid">
                                                     <label>Name</label>
@@ -89,7 +94,7 @@ get_header();
                                                     <button type="submit" class="send-btn">Send</button>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </form> -->
                                     </div>                                  
                                 </div>
                             </div>

@@ -14,9 +14,13 @@
                 </div>
             </div>
             <div class="banner-slider">
-                <div class="banner-image">
-                    <img src="<?php the_field('banner_image'); ?>" alt="">                    
-                </div>
+                <?php if( have_rows('banner_images') ): ?>
+                    <?php while( have_rows('banner_images') ): the_row(); ?>
+                        <div class="banner-image">
+                            <img src="<?php the_sub_field('banner_image'); ?>" alt="">
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>                
             </div>
         </div>
 

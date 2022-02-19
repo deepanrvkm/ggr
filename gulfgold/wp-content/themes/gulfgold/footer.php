@@ -12,7 +12,7 @@
                                     </a>
                                 </div>
                                 <div class="footer-text">
-                                    <p>Gulf Gold Refinery FZE (GGR) has been established since April 2012 and became fully operational in October, 2012 at SAIF Zone Sharjah, UAE. </p>
+                                    <p><?php the_field('footer_text', 'option'); ?></p>
                                 </div>
                             </div>
                             <div class="footer-block" data-aos="fade-up" data-aos-duration="900">
@@ -32,21 +32,21 @@
                                 <h6>Contact</h6>
                                 <div class="link">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <a target="blank" href="https://www.google.com/maps/place/25%C2%B020'43.5%22N+55%C2%B029'06.8%22E/@25.3454288,55.4830424,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x3ce734d29dfc853d!8m2!3d25.3454288!4d55.4852311?hl=en">SAIF Zone 9244, Sharjah</a>
+                                    <a target="blank" href="https://www.google.com/maps/place/25%C2%B020'43.5%22N+55%C2%B029'06.8%22E/@25.3454288,55.4830424,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x3ce734d29dfc853d!8m2!3d25.3454288!4d55.4852311?hl=en"><?php the_field('address', 'option'); ?></a>
                                 </div>
                                 <div class="link">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <a href="tel:97165529909">+971 6552 9909</a>
+                                    <a href="tel:<?php the_field('phone', 'option'); ?>">+<?php the_field('phone', 'option'); ?></a>
                                 </div>
                                 <div class="link">
                                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <a href="mailto:info@gulfrefinery.com">info@gulfrefinery.com</a>
+                                    <a href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a>
                                 </div>
                                 <ul class="social-media">
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="<?php the_field('twitter_link', 'option'); ?>" target="blank"><i class="fa fa-twitter-square"></i></a></li>
+                                    <li><a href="<?php the_field('linkedin_link', 'option'); ?>" target="blank"><i class="fa fa-linkedin-square"></i></a></li>
+                                    <li><a href="<?php the_field('facebook_link', 'option'); ?>" target="blank"><i class="fa fa-facebook-square"></i></a></li>
+                                    <li><a href="<?php the_field('instagram_link', 'option'); ?>" target="blank"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>

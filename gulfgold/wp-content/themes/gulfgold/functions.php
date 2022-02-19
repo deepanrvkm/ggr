@@ -91,3 +91,18 @@ function sk_body_class( $classes ) {
 
 	return $classes;
 }
+
+/**
+ * ACF Options page.
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'General Info',
+		'menu_title'	=> 'General Info',
+		'menu_slug' 	=> 'general-info',
+		'capability'	=> 'edit_posts',
+		'icon_url'		=> 'dashicons-edit'
+	));
+	
+}

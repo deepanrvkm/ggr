@@ -6,20 +6,21 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h2>Welcome to Gulf Gold</h2>
-                            <p>Focused on Eternal Traditional Gold Value</p>
+                            <h2><?php the_field('banner_caption'); ?></h2>
+                            <p><?php the_field('banner_text'); ?></p>
                             <a href="#" class="begin-btn scrollto" data-attr-scroll="section1">Click to begin</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="banner-slider">
-                <div class="banner-image">
-                    <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/banner1.jpg" alt="">
-                </div>
-                <div class="banner-image">
-                    <img src="<?php echo bloginfo('template_directory'); ?>/assets/images/content/banner2.jpg" alt="">
-                </div>
+                <?php if( have_rows('banner_images') ): ?>
+                    <?php while( have_rows('banner_images') ): the_row(); ?>
+                        <div class="banner-image">
+                            <img src="<?php the_sub_field('banner_image'); ?>" alt="">
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>                
             </div>
         </div>
 
@@ -27,9 +28,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="title">
-                            <h2>Our Services</h2>
-                            <p>Focused on Eternal Traditional Gold Value</p>
+                        <div class="title">                             
+                            <?php if( have_posts() ): while( have_posts() ): the_post();?>
+                                <h2>Our Services</h2>
+                                <p><?php the_field('our_services'); ?></p>
+                            <?php endwhile; else: endif;?>
                         </div>
                     </div>
                 </div>
@@ -94,8 +97,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="title" data-aos="zoom-in" data-aos-duration="900">
-                            <h2>Meet our team</h2>
-                            <p>Focused on Eternal Traditional Gold Value</p>
+                            <?php if( have_posts() ): while( have_posts() ): the_post();?>
+                                <h2>Meet our team</h2>
+                                <p><?php the_field('our_services'); ?></p>
+                            <?php endwhile; else: endif;?>
                         </div>
                     </div>
                 </div>
