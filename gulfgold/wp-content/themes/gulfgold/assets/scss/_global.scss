@@ -393,6 +393,9 @@
 				resize: none;
 				height: 200px;
 			}
+			&.wpcf7-not-valid{
+				border-color: #dc3232;
+			}
 		}
 	}
 	.send-btn{
@@ -431,4 +434,10 @@
 	.get-btn{
 		margin: 0;
 	}
+}
+.wpcf7-not-valid-tip {
+    color: #dc3232;
+    font-size: 13px;
+    padding: 5px 0 0;
+	font-weight: 500;
 }
